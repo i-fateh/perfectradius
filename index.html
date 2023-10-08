@@ -10,19 +10,30 @@
 
     <header>
         <div class="logo">Perfect Radius</div>
-        <p>Outer Radius</p>
-        <input onchange="setParentPx(value)" id="parentPX" type="number" placeholder="0" min="0">
-        <p>px | Inner Radius</p>
-        <input onchange="setEnfantPx(value)" id="enfantPX" type="number" placeholder="0" min="0">
-        <p>px | Padding</p>
-        <input onchange="setPaddingPx(value)" id="paddingPX" type="number" placeholder="0" min="0">
-        <p>px</p>
     </header>
     
     <div class="container">
         <div id="parentBorderSection">
             <div id="img1"></div>
         </div>
+    </div>
+
+    <div class="inputContainer">
+        <div class="inputSection">
+            <input onchange="setParentPx(value)" id="parentPX" class="parentBox" type="number" placeholder="0" min="0">
+            <p>Outer px</p>
+        </div>
+
+        <div class="inputSection">
+            <input onchange="setEnfantPx(value)" id="enfantPX" type="number" placeholder="0" min="0">
+            <p>Inner px</p>
+        </div>
+
+        <div class="inputSection">
+            <input onchange="setPaddingPx(value)" id="paddingPX" type="number" placeholder="0" min="0">
+            <p>Padding px</p>
+        </div>
+
     </div>
 
     <div id="response">
