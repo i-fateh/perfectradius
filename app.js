@@ -57,7 +57,6 @@ function setEnfantPx(value){
     document.getElementById('imageBox').textContent= enfantBorderRadius.style.borderTopLeftRadius
 }
 
-
 // PADDING
 function setPaddingPx(value){
     customPadding = value;

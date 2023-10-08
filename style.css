@@ -8,21 +8,17 @@ html, body {
 }
 
 header {
-    background-color: #343434;
+    background-color: #363636;
     height: 70px;
     width: 100vw;
     position: absolute;
     top: 0; left: 0;
-    display: flex; align-items: center; justify-content: center;
+    display: flex; align-items: center; justify-content: start;
 }
-header p { font-size: 1.2em; color: white; margin-left: 0px;}
 
 .logo {
-    color: white;
-    font-weight: bold;
-    font-size: 1.4em;
-    position: absolute;
-    left: 20px;
+    width: 250px;
+    margin-left: 20px;
 }
 
 .container {
@@ -30,10 +26,6 @@ header p { font-size: 1.2em; color: white; margin-left: 0px;}
 }
 
 #parentBorderSection {
-    border-top: solid 2px #D6DFF1;
-    border-left: solid 2px #D6DFF1;
-    border-right: solid 2px #D6DFF1;
-    border-bottom: 0px;
     position: absolute;
     right: 0px;
     bottom: 0px;
@@ -57,10 +49,10 @@ header p { font-size: 1.2em; color: white; margin-left: 0px;}
     height: 300px;
     transition: 1s cubic-bezier(0.32, 0, 0.67, 0) 0s;
     transition-delay: .2s;
-    z-index: 1;
-    border: solid #36ab00 2px;
+    z-index: -1;
+    border: solid #36ab00 0px;
     background-color: #d3d3d3;
-    opacity: 0.8;
+    opacity: 1;
     background-image:  radial-gradient(#929ebf 0.9px, transparent 0.9px), radial-gradient(#929ebf 0.9px, #d3d3d3 0.9px);
     background-size: 36px 36px;
     background-position: 0 0,18px 18px;
@@ -97,10 +89,6 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-}
 
 .inputSection p {
     font-size: 18px;
@@ -148,36 +136,6 @@ input[type=number] {
     margin-top: -5px;
 }
 
-#parentBorderSection2 {
-    border-radius: 0px;
-    border-top-left-radius: 90px;
-    border-top-right-radius: 90px;
-    padding: 30px;
-    border-top: solid 2px #D6DFF1;
-    border-left: solid 2px #D6DFF1;
-    border-right: solid 2px #D6DFF1;
-    border-bottom: 0px;
-    margin: 0 auto;
-    margin-top: 130px;
-    width: 40vw;
-    height: 200px;
-    transition: 1s;
-    overflow: hidden;
-    background-color: rgb(255, 255, 255);
-    display: flex; flex-direction: column; align-items: center;
-}
-
-#img2 {
-    width: 100%;
-    transition: 2s;
-    height: 300px;
-    z-index: 1;
-    border-radius: 0px;
-    border-top-left-radius: 60px;
-    border-top-right-radius: 60px;
-
-}
-
 footer {
     width: 100%;
     height: 60px;
@@ -214,14 +172,8 @@ a:hover {
     header p { font-size: 10px; color: white; margin-left: 2px; margin-top: 20px;}
 
     .logo {
-        color: white;
-        font-weight: bold;
-        font-size: 1.4em;
-        position: relative;
-        left: 0px;
-        top: 0px;
-        width: 100%;
-        text-align: center;
+        width: 250px;
+        margin: 0 auto;
     }
 
     .inputContainer {
