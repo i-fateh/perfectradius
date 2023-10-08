@@ -1,5 +1,5 @@
 html, body {
-    background-color: #F5F6F9;
+    background-color: #f5f5fc;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 0; margin: 0;
     overflow: hidden !important;
@@ -259,4 +259,39 @@ a:hover {
         left: 0px; bottom: 0px;
         background-color: white;
     }
+  }
+
+  @media only screen and (orientation: landscape) {
+
+    html, body {
+        background-color: rgb(255, 255, 255);
+        overflow: hidden !important;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer {
+        width: 100vw;
+        padding-left: 0px;
+        height: 40px;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 10px;
+        flex-wrap: wrap;
+        left: 0px; bottom: 0px;
+        background-color: white;
+    }
+
+    #response, #img1, #parentBorderSection, #container, .inputSection {
+        display: none;
+    }
+
+    #alert {
+        display: flex;
+        width: 120px;
+        height: 120px;
+    }
+
   }
