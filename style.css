@@ -157,6 +157,10 @@ a:hover {
 
 .ico {width: 20px; height: 20px; margin-left: 5px;}
 
+#alert {
+    display: none;
+}
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
     html, body {
