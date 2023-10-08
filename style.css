@@ -25,12 +25,6 @@ header p { font-size: 1.2em; color: white; margin-left: 0px;}
     left: 20px;
 }
 
-input {
-    width: 70px; height: 30px; border-radius: 10px; border: none; 
-    margin: 10px; text-align: right; font-size: 20px; 
-    color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);
-}
-
 .container {
     padding: 0px; margin: 0px; height: 100vh; width: 100vw; overflow: hidden; position: absolute; z-index: -1;
 }
@@ -73,15 +67,43 @@ input {
 }
 
 .inputContainer {
-    width: 100%;
+    width: 50%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content:space-around;
+    flex-wrap: wrap;
     position: absolute;
-    top: 100px;
+    top: 100px; left: 20px;
+    padding: 0px;
 }
+
+.inputSection {
+    width: 33%;
+    height: auto;
+    display: flex; align-items: center;
+    justify-content: space-around; flex-direction: column;
+}
+
+input {
+    width: 90px; height: 50px; border-radius: 5px; border: none; 
+    font-size: 24px; text-align: right; padding: 10px 20px;
+    color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .inputSection p {
-    font-size: 12px;
+    font-size: 18px;
 }
 
 #response {
@@ -202,16 +224,28 @@ a:hover {
         text-align: center;
     }
 
+    .inputContainer {
+        width: 90vw;
+        padding: 0px;
+        flex-direction: row;
+        padding: 0px; margin: 0px;
+    }
+
     .inputSection {
-        width: 100vw; height: 100px;
-        display: flex; align-items: center; justify-content: center; flex-direction: column;
+        width: 30%; height: 100px;
+        padding: 0px; margin: 0px;
+        display: flex; align-items: center; justify-content: center; 
+        flex-direction: column;
     }
 
     input {
         width: 55px; height: 25px; border-radius: 5px; 
-        margin: 11px 0px 0px 4px; text-align: right; font-size: 14px !important; 
+        margin: 0px; text-align: right; font-size: 14px !important; 
         color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);
         text-align: center;
+    }
+    .inputSection p {
+        font-size: 13px;
     }
 
     #response {
