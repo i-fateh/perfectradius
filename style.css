@@ -47,7 +47,8 @@ input {
     margin-right: -10vw;
     width: 40vw;
     height: 300px;
-    transition: 1s;
+    transition: .8s cubic-bezier(0.32, 0, 0.67, 0) 0s;
+    transition-delay: .1s;
     overflow: hidden !important;
     background-color: rgb(255, 255, 255);
     display: flex; flex-direction: column; align-items: center;
@@ -60,7 +61,8 @@ input {
 #img1 {
     width: 100%;
     height: 300px;
-    transition: 2s;
+    transition: 1s cubic-bezier(0.32, 0, 0.67, 0) 0s;
+    transition-delay: .2s;
     z-index: 1;
     border: solid #36ab00 2px;
     background-color: #d3d3d3;
