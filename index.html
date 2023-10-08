@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Perfect Radius</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Perfect Radius</div>
+        <p>Outer Radius</p>
+        <input onchange="setParentPx(value)" id="parentPX" type="number" placeholder="0" min="0">
+        <p>px | Inner Radius</p>
+        <input onchange="setEnfantPx(value)" id="enfantPX" type="number" placeholder="0" min="0">
+        <p>px | Padding</p>
+        <input onchange="setPaddingPx(value)" id="paddingPX" type="number" placeholder="0" min="0">
+        <p>px</p>
+    </header>
+    
+    <div class="container">
+        <div id="parentBorderSection">
+            <div id="img1"></div>
+        </div>
+    </div>
+
+    <div id="response">
+        <div class="labelContainer">
+            <div id="parentBox"></div>
+            <p>Outer Radius</p>
+        </div>
+        <div class="labelContainer">
+            <div id="imageBox"></div>
+            <p>Inner Radius</p>
+        </div>
+        <div class="labelContainer">
+            <div id="paddingBox"></div>
+            <p>Padding</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>by Fateh | 2023 | <a href="https://twitter.com/creazerty">@creazerty</a> | Made with ❤️ and JS | </p><img class="ico" src="./images/git.png" alt="github repo">
+    </footer>
+    
+    <script src="app.js"></script>
+</body>
+</html>
