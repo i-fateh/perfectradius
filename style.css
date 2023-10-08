@@ -204,8 +204,8 @@ a:hover {
     }
 
     input {
-        width: 55px; height: 25px; border-radius: 5px; 
-        margin: 0px; text-align: right; font-size: 14px !important; 
+        width: 50px; height: 65px; border-radius: 5px; 
+        margin: 0px; text-align: right; font-size: 18px !important; 
         color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);
         text-align: center;
     }
