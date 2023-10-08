@@ -23,6 +23,7 @@ function setParentPx(value){
     parentBorderRadius.style.padding = customPadding+"px"
 
     document.getElementById('enfantPX').value = 0
+    document.getElementById('paddingPX').value = 0
     document.getElementById('parentBorderSection').style.paddingBottom = "0px"
 
     parentBorderRadius.style.borderTopLeftRadius = `${parseInt(value)}px`;
@@ -42,6 +43,8 @@ function setEnfantPx(value){
     parentBorderRadius.style.padding = customPadding+"px"
 
     document.getElementById('parentPX').value = 0
+    document.getElementById('paddingPX').value = 0
+
     document.getElementById('parentBorderSection').style.paddingBottom = "0px"
 
     enfantBorderRadius.style.borderTopLeftRadius = `${parseInt(value)}px` 
