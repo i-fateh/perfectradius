@@ -59,13 +59,15 @@ header {
 }
 
 .inputContainer {
-    width: 50%;
+    width: 60%;
+    height: 450px;
     display: flex;
-    justify-content:space-around;
-    flex-wrap: wrap;
-    position: absolute;
-    top: 100px; left: 20px;
+    align-items: center;
+    justify-content:start;
+    position: relative;
+    top: 20px; left: 0px;
     padding: 0px;
+    margin: 0 auto;
 }
 
 .inputSection {
@@ -76,9 +78,9 @@ header {
 }
 
 input {
-    width: 90px; height: 50px; border-radius: 5px; border: none; 
-    font-size: 24px; text-align: right; padding: 10px 20px;
-    color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);
+    width: 120px; height: 80px; border-radius: 0px; border: none; 
+    font-size: 48px; text-align: right; padding: 0px 30px;
+    color: rgb(50, 50, 50); background-color: rgb(255, 255, 255);
 }
 
 
@@ -99,12 +101,12 @@ input::-webkit-inner-spin-button {
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
     flex-direction: column;
     font-size: 2em;
     position: absolute;
     text-align: center;
-    bottom: 0px;
+    bottom: 140px;
     z-index: -1;
     left: 0px;
     color: rgb(55, 55, 55);
@@ -184,7 +186,11 @@ a:hover {
     }
 
     .inputContainer {
-        width: 90vw;
+        width: 100vw;
+        top: 130px;
+        position: absolute;
+        display: flex; align-items: center; justify-content: center;
+        height: auto;
         padding: 0px;
         flex-direction: row;
         padding: 0px; margin: 0px;
@@ -211,6 +217,7 @@ a:hover {
         width: 100%;
         height: 100px;
         flex-direction: row;
+        justify-content: center;
         font-size: 1em;
         position: absolute;
         bottom: 40px;
