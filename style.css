@@ -158,10 +158,10 @@ a:hover {
 .ico {width: 20px; height: 20px; margin-left: 5px;}
 
 .alert {
-    display: none !important;
+    display: none;
 }
 .alert img {
-    display: none !important;
+    display: none;
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
@@ -268,10 +268,10 @@ a:hover {
     }
   }
 
-  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  @media only screen and (min-device-width : 320px) and (max-device-width : 1024px) and (orientation : landscape) {
         
     html, body {
-        background-color: rgba(238, 19, 19, 0.227);
+        background-color: rgb(255, 255, 255);
         overflow: hidden !important;
         width: 100vw;
         height: 100vh;
@@ -296,10 +296,10 @@ a:hover {
     }
 
     .alert {
-        display: block;
-        width: 120px;
-        height: 120px;
-        z-index: 99;
+        display: flex;
+        width: 170px;
+        height: 170px;
+        background-color: red;
     }
 
     .alert img {
