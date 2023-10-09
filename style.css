@@ -54,16 +54,11 @@ header {
     border: solid #36ab00 0px;
 
     filter: grayscale(2);
-
-    background-image: url(./images/blur.png);
+    background-image: url('./images/blur.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-color: #d3d3d3;
-    opacity: 1;
-    background-image:  radial-gradient(#929ebf 0.9px, transparent 0.9px), radial-gradient(#929ebf 0.9px, #d3d3d3 0.9px);
-    background-size: 36px 36px;
-    background-position: 0 0,18px 18px; */
+
 }
 
 .inputContainer {
@@ -265,10 +260,6 @@ a:hover {
         height: 100%;
         transition: 2s;
         z-index: -1;
-        background-color: #dddddd;
-        opacity: 0.8;
-        background-size: 10px 10px;
-        background-image: repeating-linear-gradient(45deg, #414141 0, #414141 1px, #dddddd 0, #dddddd 50%);
     }
     
     footer {
