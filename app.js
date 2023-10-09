@@ -1,86 +1,48 @@
-let parentBorderRadius = document.getElementById('parentBorderSection')
-let parentPX = document.getElementById('parentPX');
+// les ciblages d'éléments à animer
+let parentBorderRadius = document.getElementById('parentBorderSection');
+let childBorderRadius = document.getElementById('childDiv');
+let customPadding = 0;
 
-let customParentRadius = 0;
-let customEnfantRadius = 0;
-var customPadding = 0;
+// les inputs
+let parentInputPX = document.getElementById('parentInputPX');
+let childInputPX = document.getElementById('childInputPX');
+let paddingInputPX = document.getElementById('paddingInputPX');
 
-parentBorderRadius.style.padding = customPadding+"px"
-
-let enfantBorderRadius = document.getElementById('img1')
-
-// pour recuperer le padding
-let outerElement = window.getComputedStyle(parentBorderRadius);
-let outerElementPadding = outerElement.getPropertyValue("padding");
-
-// pour recuperer le border radius de Parent
-let outerElementBorderRadius = outerElement.getPropertyValue("border-radius");
-
-// PARENT
-function setParentPx(value){
-
-    enfantBorderRadius.style.filter = "grayscale(0)"
-    // RAZ
-    customPadding = parseInt(value/3)
-    parentBorderRadius.style.padding = customPadding+"px"
-
-    document.getElementById('enfantPX').value = 0
-    document.getElementById('paddingPX').value = 0
-    document.getElementById('parentBorderSection').style.paddingBottom = "0px"
-
-    parentBorderRadius.style.borderTopLeftRadius = `${parseInt(value)}px`;
-    enfantBorderRadius.style.borderTopLeftRadius = `${parseInt(value) - parseInt(customPadding)}px`
-    parentBorderRadius.style.borderTopRightRadius = `${parseInt(value)}px`;
-    enfantBorderRadius.style.borderTopRightRadius = `${parseInt(value) - parseInt(customPadding)}px`
+// Fonction pour définir les propriétés de bordure parent, enfant et de padding
+function setBorderAndPadding(parentValue, childValue, paddingValue) {
+    childBorderRadius.style.filter = "grayscale(0)";
+    parentBorderRadius.style.borderTopLeftRadius = `${parseInt(parentValue)}px`;
+    parentBorderRadius.style.borderTopRightRadius = `${parseInt(parentValue)}px`;
+    childBorderRadius.style.borderTopLeftRadius = `${parseInt(childValue)}px`;
+    childBorderRadius.style.borderTopRightRadius = `${parseInt(childValue)}px`;
     
-    document.getElementById('parentBox').textContent= parentBorderRadius.style.borderTopRightRadius
-    document.getElementById('paddingBox').textContent= customPadding+"px"
-    document.getElementById('imageBox').textContent= enfantBorderRadius.style.borderTopLeftRadius
-}
-
-// ENFANT
-function setEnfantPx(value){
-    enfantBorderRadius.style.filter = "grayscale(0)"
-    // RAZ
-    customPadding = parseInt(value/2)
-    parentBorderRadius.style.padding = customPadding+"px"
-
-    document.getElementById('parentPX').value = 0
-    document.getElementById('paddingPX').value = 0
-
-    document.getElementById('parentBorderSection').style.paddingBottom = "0px"
-
-    enfantBorderRadius.style.borderTopLeftRadius = `${parseInt(value)}px` 
-    parentBorderRadius.style.borderTopLeftRadius = `${parseInt(value) + customPadding}px`
-    enfantBorderRadius.style.borderTopRightRadius = `${parseInt(value)}px` 
-    parentBorderRadius.style.borderTopRightRadius = `${parseInt(value) + customPadding}px`
-
-    document.getElementById('parentBox').textContent= parentBorderRadius.style.borderTopRightRadius
-    document.getElementById('paddingBox').textContent= customPadding+"px"
-    document.getElementById('imageBox').textContent= enfantBorderRadius.style.borderTopLeftRadius
-}
-
-// PADDING
-function setPaddingPx(value){
-    enfantBorderRadius.style.filter = "grayscale(0)"
-    customPadding = value;
+    parentBorderRadius.style.padding = `${paddingValue}px`;
     
-    parentBorderRadius.style.borderTopLeftRadius = `${parseInt(value*3)}px`;
-    enfantBorderRadius.style.borderTopLeftRadius = `${value*3 - customPadding}px`
-    parentBorderRadius.style.borderTopRightRadius = `${parseInt(value*3)}px`;
-    enfantBorderRadius.style.borderTopRightRadius = `${value*3 - customPadding}px`
-
-    parentBorderRadius.style.padding = value+"px"
-
-    // RAZ
-    document.getElementById('parentPX').value = 0
-    document.getElementById('enfantPX').value = 0
-    document.getElementById('parentBorderSection').style.paddingBottom = "0px"
-
-    // RESPONSE
-    document.getElementById('parentBox').textContent= parentBorderRadius.style.borderTopRightRadius
-    document.getElementById('paddingBox').textContent= customPadding+"px"
-    document.getElementById('imageBox').textContent= enfantBorderRadius.style.borderTopLeftRadius
+    parentInputPX.value = parentValue;
+    childInputPX.value = childValue;
+    paddingInputPX.value = paddingValue;
 }
 
-document.getElementById('parentBorderSection').style.paddingBottom = "0px"
+// Ecoute de l'input Outer px
+parentInputPX.addEventListener('input', function () {    
+    const parentValue = parseInt(parentInputPX.value);
+    const paddingValue = parseInt(parentValue / 3);
+    const childValue = parseInt(parentInputPX.value-paddingValue);
+    setBorderAndPadding(parentValue, childValue, paddingValue);
+});
+
+// Ecoute de l'input Inner px
+childInputPX.addEventListener('input', function () {
+    const childValue = parseInt(childInputPX.value);
+    const paddingValue = parseInt(childValue / 2);
+    const parentValue = parseInt(childValue+paddingValue);
+    setBorderAndPadding(parentValue, childValue, paddingValue);
+});
+
+// Ecoute de l'input padding px
+paddingInputPX.addEventListener('input', function () {
+    const paddingValue = parseInt(paddingInputPX.value);
+    const parentValue = paddingValue * 3;
+    const childValue = paddingValue * 2;
+    setBorderAndPadding(parentValue, childValue, paddingValue);
+});

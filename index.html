@@ -18,39 +18,21 @@
 
     <div class="container">
         <div id="parentBorderSection">
-            <div id="img1"></div>
+            <div id="childDiv"></div>
         </div>
-    </div>
-
-    <div class="inputContainer">
-        <div class="inputSection">
-            <input onchange="setParentPx(value)" id="parentPX" class="parentBox" type="number" placeholder="0" min="0">
-            <p>Outer px</p>
-        </div>
-
-        <div class="inputSection">
-            <input onchange="setEnfantPx(value)" id="enfantPX" type="number" placeholder="0" min="0">
-            <p>Inner px</p>
-        </div>
-
-        <div class="inputSection">
-            <input onchange="setPaddingPx(value)" id="paddingPX" type="number" placeholder="0" min="0">
-            <p>Padding px</p>
-        </div>
-
     </div>
 
     <div id="response">
         <div class="labelContainer">
-            <div id="parentBox"></div>
+            <input id="parentInputPX" class="parentBox" type="number" placeholder="0" min="0">
             <p>Outer Radius</p>
         </div>
         <div class="labelContainer">
-            <div id="imageBox"></div>
+            <input id="childInputPX" type="number" placeholder="0" min="0">
             <p>Inner Radius</p>
         </div>
         <div class="labelContainer">
-            <div id="paddingBox"></div>
+            <input id="paddingInputPX" type="number" placeholder="0" min="0">
             <p>Padding</p>
         </div>
     </div>
