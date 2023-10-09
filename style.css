@@ -94,8 +94,9 @@ input::-webkit-inner-spin-button {
     align-items: center;
     justify-content: center;
     background-color: white;
-    border: solid 1px #d63031;
+    border: solid 1px #9f9f9f;
     width: 150px; height: 80px;
+    font-size: 28px;
     margin: 10px;
     border-radius: 2px;
     text-align: center;
@@ -103,12 +104,10 @@ input::-webkit-inner-spin-button {
 
 .paddingBox {
     background-color: white;
-    border: solid 2px rgb(227, 227, 227);
 }
 
 .childBox {
     background-color: white;
-    border: solid 1px #36ab00;
 }
 
 .labelContainer p {
