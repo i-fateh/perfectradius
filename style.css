@@ -52,11 +52,18 @@ header {
     transition-delay: .2s;
     z-index: -1;
     border: solid #36ab00 0px;
-    background-color: #d3d3d3;
+
+    filter: grayscale(2);
+
+    background-image: url(./images/blur.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: #d3d3d3;
     opacity: 1;
     background-image:  radial-gradient(#929ebf 0.9px, transparent 0.9px), radial-gradient(#929ebf 0.9px, #d3d3d3 0.9px);
     background-size: 36px 36px;
-    background-position: 0 0,18px 18px;
+    background-position: 0 0,18px 18px; */
 }
 
 .inputContainer {

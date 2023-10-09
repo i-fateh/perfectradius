@@ -18,6 +18,8 @@ let outerElementBorderRadius = outerElement.getPropertyValue("border-radius");
 
 // PARENT
 function setParentPx(value){
+
+    enfantBorderRadius.style.filter = "grayscale(0)"
     // RAZ
     customPadding = parseInt(value/3)
     parentBorderRadius.style.padding = customPadding+"px"
@@ -38,6 +40,7 @@ function setParentPx(value){
 
 // ENFANT
 function setEnfantPx(value){
+    enfantBorderRadius.style.filter = "grayscale(0)"
     // RAZ
     customPadding = parseInt(value/2)
     parentBorderRadius.style.padding = customPadding+"px"
@@ -59,6 +62,7 @@ function setEnfantPx(value){
 
 // PADDING
 function setPaddingPx(value){
+    enfantBorderRadius.style.filter = "grayscale(0)"
     customPadding = value;
     
     parentBorderRadius.style.borderTopLeftRadius = `${parseInt(value*3)}px`;
